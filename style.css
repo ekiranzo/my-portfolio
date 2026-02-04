@@ -11,16 +11,30 @@ body {
   margin:0 auto
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     font-weight:600;
-    margin: 0 0 10px;
     color:#ff0f0f;
 }
 
-.main-title {
+#nav {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #000000, #000000a4);
+}
+#nav h1 {
+    padding-top: 5px;
+    text-align: left;
+} 
+
+#nav nav {
+    float: left;
+    display: block;
+    color: #ff0f0f;
+    text-align: center;
+    text-decoration: none;
 
 }
-
 
 .section {
     align-items: center;
@@ -37,8 +51,10 @@ h1,h2,h3,h4,h5,h6 {
 
 .card-slide {
     display: flex;
+    flex-direction: column;
     gap: 20px;
-    align-items: center;
+    align-items: start;
+    scroll-snap-align: initial;
 }
 
 
@@ -50,9 +66,12 @@ h1,h2,h3,h4,h5,h6 {
 
 .portrait {
     width: 100%;
+    background-image: linear-gradient(to top, #ff0f0f, #000000);
     max-width: 275px;
     height: auto;
-    border-radius: 4px;
+    border-radius: 10px;
+    border-width: 10px;
+    border-bottom:#ff0f0f;
     object-fit: cover;
     margin-top: 40px
 }
@@ -68,13 +87,15 @@ h1,h2,h3,h4,h5,h6 {
     align-content: center;
     justify-content: center;
     align-items: center;
-    margin: 10px 10px 10px;
 }
 
 .proj-list {
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
 }
 
-.proj-image {
-
+.card-slide .text-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
