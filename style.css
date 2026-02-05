@@ -1,4 +1,7 @@
-
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
 
 body {
   font-family:"Poppins",sans-serif;
@@ -19,6 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #nav {
+    display: none;
     position: sticky;
     top: 0;
     overflow: hidden;
@@ -38,32 +42,44 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-.section {
+section {
+    flex: 3;
     align-items: center;
     flex-flow: column wrap;
-    scroll-snap-align: initial;
+    scroll-snap-align: center;
+    height: 100vh;
 }
 
 .hero-slide {
     display: flex;
+    flex-direction: row;
     gap: 20px;
-    align-items: center;
+    align-content: center;
     justify-content: center;
+    padding-top: 0;
+    height: 100vh;
 }
 
 .card-slide {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: start;
-    scroll-snap-align: initial;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.slide-container {
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth; 
 }
 
 
 .image-container {
     flex: 1;
-    height: 600px;
-    overflow: hidden;
+    height: auto;
+    overflow: visible;
     align-content: center;
 }
 
@@ -79,14 +95,69 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 40px
 }
 
+.intro-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    scale: 110%;
+}
+
+.hire-button {
+    background-color: #ff0f0f;
+    color: #cccccc;
+    border: 2px solid #ff0f0f;
+}
+
+.sc-button {
+    background-color: transparent;
+    color: #cccccc;
+    border: 1px solid #ff0f0f;
+}
+
+
 .text-container {
     flex: 2;
+    align-content: center;
+    justify-content: center;
+}
+
+#skills.card-slide {
+    gap: 10px
+}
+
+#skills .section-title{
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+
+#skills .section-title h2 {
+    margin-bottom: 0;
+}
+
+#skills .skill-title h3 {
+    padding-top: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: left;
 }
 
 .skill-container {
     display: flex;
-    justify-content: center;
-    gap: 60px;
+    justify-content: left;
+    gap: 10px;
     flex-wrap: wrap;
     padding-left: 25px;
     padding-right: 10px;
@@ -94,6 +165,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .skill-group {
     text-align: left;
+    min-width: 160px;
 }
 
 .skill-title {
@@ -101,19 +173,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skillset {
-    list-style: square;
+    list-style: none;
     padding: 0;
-}
-
-.skillset li {
-    margin: 5px 0;
-    color: #cccccc;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .section-title {
     align-content: center;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+
+.section-title h2 {
+    margin-bottom: 0;
+    padding-bottom: 5px;
 }
 
 .proj-list {
@@ -142,6 +219,16 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+#about .about-bio {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#about .section-title {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 
