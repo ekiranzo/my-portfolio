@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    scrollbar-width: none;
 }
 
 body {
@@ -47,6 +48,7 @@ section {
     align-items: center;
     flex-flow: column wrap;
     scroll-snap-align: center;
+    scroll-behavior: smooth;
     height: 100vh;
 }
 
@@ -127,6 +129,26 @@ section {
     background-color: transparent;
     color: #cccccc;
     border: 1px solid #ff0f0f;
+}
+
+.scroll-down {
+    position: sticky;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 90vh;
+    float: right;
+    margin-right: 25px;
+    filter: invert(100%);
+}
+
+.bobbing-anim {
+    animation-name: bobbing;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 .back-to-top {
@@ -246,7 +268,8 @@ section {
 }
 
 .section-title h2 {
-    margin-bottom: 0;
+    font-size: 50px;
+    margin-bottom: 25px;
     padding-bottom: 5px;
 }
 
@@ -277,11 +300,6 @@ section {
     border: 1px solid #333;
 }
 
-.proj-image:hover {
-
-}
-
-
 .card-slide .text-container {
     display: flex;
     flex-direction: row;
@@ -298,8 +316,76 @@ section {
     padding-bottom: 0;
 }
 
+.contact-box {
+    text-align: center;
+    align-content: left;
+    justify-content: center;
+}
+.contact-title {
+    text-align: center;
+}
+
+.contact-image {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    filter: invert(100%);
+}
+
+.contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0 10px 0;
+    gap: 20px;
+}
+
+.contact-item {
+    height: 30px;
+    padding: 10px 10px 10px;
+    border: 1px solid #ff4a4a;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-list a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.contact-name p {
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 .footer-section {
+    margin-top: 20px;
     color: #676767;
     border-top: 1px solid #222;
+}
+
+.footer-section p {
+    text-align: end;
+    top: 90vh;
+}
+
+@keyframes bobbing  {
+    0% {
+        transform: translateY(0);
+    } 50% {
+        transform: translateY(-20);
+    } 100% {
+        transform: translateY(0);
+    }
 }
