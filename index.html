@@ -8,12 +8,12 @@
 </head>
 <body>
     <div>
-        <div id="nav">
+        <!-- <div id="nav">
             <h1 class="main-title">EKIranzo</h1>
             <nav>
             </nav>
 
-        </div>
+        </div> -->
         <div class="slider-container">
 
             <section id="#about" class="hero-slide">
@@ -21,12 +21,12 @@
                     <img class="portrait" src="./assets/nobgportrait.png" alt="Image of Kalel Iranzo">
                 </div>   
                 <div class="text-container">
-                    <h1>Hi, My name is Eiram Kalel Iranzo.</h1>
+                    <h1 style="font-size: 35px;">Hi, My name is Eiram Kalel Iranzo.</h1>
                     <p class="about-bio">
                         I'm a 20-year-old student studying at the University of
                         the Philippines—Los Baños Campus on the BS Computer Science degree program.
                     </p>
-                    <p>
+                    <p style="margin-bottom: 16px;">
                         I am a graduating Computer Science student dedicated to 
                         crafting responsive and interactive web applications. With a 
                         strong foundation in problem-solving and a passion for UI/UX, I 
@@ -40,20 +40,29 @@
                         <a class="sc-button btn" href="#skills">Skills</a>
                     </div>
                 </div>
-                <img src="./assets/logos/arrow-down.png" alt="Scroll down" class="scroll-down bobbing-anim">
+                <a href="#projects" class="scroll-down"><img src="./assets/logos/arrow-down.png" alt="Scroll down" class="bobbing-anim"></a>
             </section>
 
             <div>
-                <a class="back-to-top" href="#"><img src="./assets/logos/arrow-up.png" alt="Back to top"></a>
                 <section  class="card-slide"> 
                     <div id="projects" class="section-title">
                         <h2>Previous Works</h2>
                     </div>
                     <div class="proj-list">
-                        <img class="proj-image" src="./assets/thumb_taho!.png" alt="UPLB GameJam 2025 | TAHO!">
-                        <img class="proj-image" src="./assets/thumb_RProject.png" alt="Pollution Reduction Optimization | CMSC 150 Project in R">
-                        <img id="java-proj" class="proj-image" src="./assets/thumb_22JavaProject.png" alt="Brain Rot Royale | CMSC 22 Project in Java">
+                        <a href="#proj1">
+                            <img class="proj-image desc-btn" src="./assets/thumb_taho!.png" alt="UPLB GameJam 2025 | TAHO!">
+                            <div class="centered">TAHO!</div>
+                        </a>
+                        <a href="#proj2">
+                            <img id="r-proj" class="proj-image desc-btn" src="./assets/thumb_RProject.png" alt="Pollution Reduction Optimization | CMSC 150 Project in R">
+                            <div class="centered">Greenvale City <br> Pollution Reduction</div>
+                        </a>
+                        <a href="#proj3">
+                            <img id="java-proj" class="proj-image desc-btn" src="./assets/thumb_22JavaProject.png" alt="Brain Rot Royale | CMSC 22 Project in Java">
+                            <div class="centered">Brain Rot Royale</div>
+                        </a>
                     </div>
+                    <a href="#skills" class="scroll-down"><img src="./assets/logos/arrow-down.png" alt="Scroll down" class="bobbing-anim"></a>
                 </section>
                 <br>
                 <section id="skills" class="card-slide">
@@ -99,10 +108,11 @@
                             </ul>
                         </div>
                     </div>
-        
+                    <a href="#contact-box" class="scroll-down"><img src="./assets/logos/arrow-down.png" alt="Scroll down" class="bobbing-anim"></a>
                 </section>
                 <br>
                 <section id="contact-box" class="card-slide">
+
                     <div class="section-title">
                             <h2 class="contact-title">Socials</h2>
                         </div>
@@ -129,7 +139,7 @@
                         </ul>
                         <footer class="footer-section">
                             <p>© Kalel Iranzo. All Rights Reserved.</p>
-                            <p></p>
+                            <p><a href="#"> Back to top </a></p>
                         </footer>
                     </div>
                 </section>
@@ -140,4 +150,37 @@
 
     </div>
 </body>
+<div class="proj-popup" id="proj1">
+    <div class="proj-popup-block">
+        <h1>TAHO!</h1>
+        <p> A project created from the UPLB GameJam 2025.
+            It is a 2D platformer coded in GDScript where you serve taho 
+            to customers in the neighbourhood, while dodging rowdy kids 
+            who might get in your way.
+        </p>
+        <a href="#projects" class="proj-btn">Close</a>
+    </div>
+</div>
+<div class="proj-popup" id="proj2">
+    <div class="proj-popup-block">
+        <h1>Greenvale City Pollution Reduction</h1>
+        <p> The Greenvale City Pollution Reduction Project is a program
+            the calculates if the chosen projects are able to achieve or 
+            exceed the required pollutant reduction targets, while spending 
+            the least possible amount of money.
+        </p>
+        <a href="#projects" class="proj-btn">Close</a>
+    </div>
+</div>
+<div class="proj-popup" id="proj3">
+    <div class="proj-popup-block">
+        <h1>Brain Rot Royale</h1>
+        <p>
+            A JavaFX-based clicker game with RPG elements, card collection, 
+            and inventory management. Battle monsters, collect cards, and 
+            level up in this addictive idle game experience.
+        </p>
+        <a href="#projects" class="proj-btn">Close</a>
+    </div>
+</div>
 </html>
